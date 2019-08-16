@@ -1,0 +1,30 @@
+html , body{
+    height: 100%;
+}
+.colclass{
+    text-align: center;
+
+}
+
+.leftcol{
+
+    background-color: aqua;
+
+}
+
+.midcol{
+    background-color: aquamarine;
+}
+
+.rightcol{
+    background-color: blue;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
