@@ -1,7 +1,7 @@
 package com.example.demo.repositories;
 
-import com.example.demo.domain.Posts;
+import com.example.demo.domain.Post;
 import org.springframework.data.repository.CrudRepository;
 
-public interface PostRepository extends CrudRepository<Posts, Long> {
+public interface PostRepository extends CrudRepository<Post, Long> {
 }

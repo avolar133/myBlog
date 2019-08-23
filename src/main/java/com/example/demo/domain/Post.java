@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.sql.Date;
 
 @Entity
-public class Posts {
+public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,11 +16,13 @@ public class Posts {
     @Column(columnDefinition = "TEXT")
     private String text;
 
-    public Posts(String author, Date date, String text) {
+    public Post(String author, Date date, String text) {
         this.author = author;
         this.date = date;
         this.text = text;
     }
+
+    public Post(){}
 
     public String getText() {
         return text;
