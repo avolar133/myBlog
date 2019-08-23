@@ -5,12 +5,14 @@
 </head>
 <body>
 <div th:fragment="post">
-    <div class="card text-right">
-        <div class="card-body">
-            <h5 class="card-body">פוסט ראשון</h5>
-            <h6 class="card-subtitle mb-2 text-muted">פורסם בתאריך 15/08/19 מאת מיכאל </h6>
-            <p class="card-text" th:text="${text}"></p>
-            <a href="#" class="card-link"></a>
+    <div th:each="post:${allPosts}">
+        <div class="card text-right">
+            <div class="card-body">
+                <h5 class="card-body" th:text="${post.id}"></h5>
+                <h6 class="card-subtitle mb-2 text-muted" th:text="${post.date}"></h6>
+                <p class="card-text" th:text="${post.text}"></p>
+                <a href="#" class="card-link"></a>
+            </div>
         </div>
     </div>
 </div>

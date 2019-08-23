@@ -32,14 +32,6 @@ public class PostController {
         return postService.getPostById(id);
     }
 
-    /*
-    @GetMapping("/post/{id}")
-    public String post(@PathVariable("id") Long id, Model model){
-        //Long num = new Long(1);
-        model.addAttribute("text",postService.getPostById(id));
-        return "forward:/post";
-    }
-    */
 
     //The address that you type in
     @GetMapping("/sandbox")
@@ -49,6 +41,15 @@ public class PostController {
 
         // your template reference
         return "sandbox";
+    }
+
+    @GetMapping("/")
+    public String allPosts(Model model){
+        //s must be equal to the var in the template
+        model.addAttribute("allPosts", postService.getAllPosts());
+
+        // your template reference
+        return "index";
     }
 
 
