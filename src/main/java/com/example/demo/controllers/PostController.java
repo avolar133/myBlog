@@ -53,4 +53,12 @@ public class PostController {
     }
 
 
+    @GetMapping("/article/{id}")
+    public String linkToSingeArticle(@PathVariable("id") Long id,Model model){
+
+        model.addAttribute("singlePost", postService.getPostById(id));
+        System.out.println("asdasd" + id);
+        return "article";
+    }
+
 }
